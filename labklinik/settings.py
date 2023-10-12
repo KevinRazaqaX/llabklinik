@@ -76,11 +76,15 @@ WSGI_APPLICATION = 'labklinik.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'URL': 'postgresql://postgres:mzVQsQ7c3vSrZjdB1WG6@containers-us-west-116.railway.app:7889/railway',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'mzVQsQ7c3vSrZjdB1WG6',
+        'HOST': 'containers-us-west-116.railway.app',
+        'PORT': 7889,
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
