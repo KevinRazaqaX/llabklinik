@@ -66,5 +66,5 @@ def base_view(request):
             task.user = request.user  # Set the user for the task
             task.save()  # Save the form data to the database
             return redirect('task_list')
-    return render(request, 'base.html',{'tasks': tasks,'form': form})
+    return render(request, 'index.html',{'tasks': tasks,'form': form})
 
