@@ -1,0 +1,43 @@
+<style>
+    body {
+      background-color: #DA1B4F;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-top: 100px;
+    }
+
+    .login-form, .register-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, button {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: white ;
+      color: #DA1B4F;
+      cursor: pointer;
+    }
+  </style>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+    <form method="post" action="{% url 'register' %}" style="text-align: center;">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+  

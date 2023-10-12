@@ -1,0 +1,51 @@
+{% load static %}
+<style>
+    body {
+      background-color: #DA1B4F;
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      margin-top: 100px;
+    }
+
+    .login-form, .register-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, button {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: white ;
+      color: #DA1B4F;
+      cursor: pointer;
+    }
+  </style>
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+    <div style="text-align: center; padding-top: 80px;">
+        <h2 >Welcome To Lab & Klinik</h2>
+        
+    </div>
+    <form method="post" action="{% url 'login' %}" style="text-align: center;">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" name="username" required><br>
+        <label for="password">Password:</label>
+        <input type="password" name="password" required><br>
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+  
